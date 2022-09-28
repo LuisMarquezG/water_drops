@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #edeeef;
+}
+
+.drops {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border-radius: 65% 35% 27% 73% / 45% 50% 50% 55%;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05), 
+                      10px 25px 10px rgba(0,0,0,0.1),
+                      15px 20px 20px rgba(0,0,0,0.05),
+                inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+}
+
+.drop::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 65% 35% 27% 73% / 45% 50% 50% 55%;;
+}
+
+.drop::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 65px;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+}
+
+.drop:nth-child(2) {
+    transform: scale(0.5) translate(-200px, 180px);
+    border-radius: 73% 27% 37% 63% / 40% 43% 57% 60% ;
+}
+
+.drop:nth-child(3) {
+    transform: scale(0.3) translate(-200px, -440px);
+    border-radius: 73% 27% 37% 63% / 63% 43% 57% 37%;
+}
+
+.drop:nth-child(4) {
+    transform: scale(0.4) translate(340px, 10px);
+    border-radius: 47% 53% 65% 35% / 55% 49% 51% 45%;
+}
+
+.drop:nth-child(5) {
+    transform: scale(0.6) translate(200px, -260px);
+    border-radius: 37% 63% 65% 35% / 73% 44% 56% 27%;
+}
+
+/* .drop-falling {
+    position: absolute;
+    transform: translate(50px, -330px);
+    width: 39px;
+    height: 102px;
+    background: transparent;
+    border-radius: 50% 50% 49% 51% / 72% 74% 26% 28%;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05), 
+                      10px 105px 10px rgba(0,0,0,0.1),
+                      15px 10px 20px rgba(0,0,0,0.05),
+                inset -10px -10px 15px rgba(255,255,255,0.9);
+}
+
+.drop-falling::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    background: #fff;
+    width: 6px;
+    height: 58px;
+    border-radius: 50% 50% 49% 51% / 72% 74% 26% 28%;
+} */
+
